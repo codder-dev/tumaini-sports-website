@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Soccer Videos - Tumaini Sports Initiative. Watch our football training sessions, matches, and highlights." />
+    <meta name="keywords" content="Tumaini Sports, soccer videos, football training, youth soccer, Kenya" />
+    <meta name="author" content="Tumaini Sports Initiative" />
+    <meta name="robots" content="index, follow" />
+
+    <meta property="og:title" content="Soccer Videos - Tumaini Sports Initiative" />
+    <meta property="og:description" content="Watch our football training sessions, matches, and highlights." />
+    <meta property="og:url" content="https://www.tumainisports.com/soccer-videos.html" />
+    <meta property="og:type" content="website" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="theme-color" content="#c0392b" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <!-- ===== CSS FILES ===== -->
+    <link rel="stylesheet" href="css/style.css" />
+   
+
+    <!-- ===== FONTS & ICONS ===== -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+
+    <link rel="icon" href="/images/tsi.png" type="image/x-icon" />
+
+    <title>Soccer Videos - Tumaini Sports Initiative</title>
+</head>
+<body>
+
+    <!-- ===== TOP HEADER BAR ===== -->
+    <div class="top-header">
+        <div class="container">
+            <div class="top-header-content">
+                <div class="top-header-left">
+                    <span><i class="fas fa-phone-alt"></i> +254 726 318 700</span>
+                    <span><i class="fas fa-map-marker-alt"></i> Mbagathi Road Primary School, Nairobi, Kenya</span>
+                    <span><i class="far fa-clock"></i> 14:00 - 18:00 (Mon-Fri)</span>
+                </div>
+                <div class="top-header-right">
+                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===== NAVIGATION ===== -->
+    <nav class="navbar" id="navbar">
+        <div class="container">
+            <div class="nav-wrapper">
+                <div class="logo">
+                    <a href="index.html">
+                        <img src="/images/tsi.png" width="30px" height="30px" />
+                        <span class="logo-text">Tumaini <span>Sports</span> Initiative</span>
+                    </a>
+                </div>
+
+                <ul class="nav-menu" id="navMenu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="soccer-videos.html" class="active">Soccer Videos</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+
+                <div class="nav-actions">
+                    <a href="contact.html" class="btn-donate">
+                        <i class="fas fa-heart"></i> <span>Support Us</span>
+                    </a>
+                    <div class="hamburger" id="hamburger">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ===== VIDEOS HERO ===== -->
+    <section class="videos-hero soccer-hero">
+        <div class="container">
+            <div class="videos-hero-content">
+                <span class="hero-badge"><i class="fas fa-futbol"></i> Soccer</span>
+                <h1>Soccer Videos</h1>
+                <p>Watch our football training sessions, matches, and highlights</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== VIDEO FILTERS ===== -->
+    <section class="video-filters">
+        <div class="container">
+            <div class="filter-buttons">
+                <button class="filter-btn active" data-filter="all">All Videos</button>
+                <button class="filter-btn" data-filter="training">Training</button>
+                <button class="filter-btn" data-filter="matches">Matches</button>
+                <button class="filter-btn" data-filter="highlights">Highlights</button>
+                <button class="filter-btn" data-filter="skills">Skills</button>
+            </div>
+            <div class="filter-count">
+                <span id="videoCount">0</span> Videos
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== VIDEO GRID ===== -->
+    <section class="video-grid-section">
+        <div class="container">
+            <div class="video-grid" id="videoGrid">
+
+                <!---NEW UPDATED VIDEOS-->
+            
+<div class="video-item" data-category="highlights">
+                    <div class="video-thumbnail" style="background-image: url('/images/Capture.JPG');">
+                        <div class="video-play-overlay">
+                            <i class="fas fa-play-circle"></i>
+                            <span>Watch Video</span>
+                        </div>
+                        <div class="video-duration">01:25</div>
+                    </div>
+                    <div class="video-info">
+                        <h4>Engaging parents and teachers</h4>
+                        <p>Engaging our teachers and parents in our sessions</p>
+                        <div class="video-meta">
+                            <span><i class="far fa-calendar-alt"></i> Latest</span>
+                            <span><i class="far fa-eye"></i> 245 views</span>
+                        </div>
+                      
+                        <div class="video-link" data-video="/videos/video-1.mp4"></div>
+                    </div>
+                </div>
+
+                <div class="video-item" data-category="highlights">
+                    <div class="video-thumbnail" style="background-image: url('/images/Capture1.JPG');">
+                        <div class="video-play-overlay">
+                            <i class="fas fa-play-circle"></i>
+                            <span>Watch Video</span>
+                        </div>
+                        <div class="video-duration">01:25</div>
+                    </div>
+                    <div class="video-info">
+                        <h4>One of our Queens</h4>
+                        <p>One of our Queens giving her life story</p>
+                        <div class="video-meta">
+                            <span><i class="far fa-calendar-alt"></i> Latest</span>
+                            <span><i class="far fa-eye"></i> 245 views</span>
+                        </div>
+                      
+                        <div class="video-link" data-video="/videos/gallery-19 (1).mp4"></div>
+                    </div>
+                </div>
+
+           
+
+                <!-- ===== VIDEO 1: Training Session ===== -->
+                <div class="video-item" data-category="training">
+                    <div class="video-thumbnail" style="background-image: url('/images/thumbnail1.JPG');">
+                        <div class="video-play-overlay">
+                            <i class="fas fa-play-circle"></i>
+                            <span>Watch Video</span>
+                        </div>
+                        <div class="video-duration">08:15</div>
+                    </div>
+                    <div class="video-info">
+                        <h4>Football Training Session</h4>
+                        <p>Youth football coaching focusing on ball control and passing</p>
+                        <div class="video-meta">
+                            <span><i class="far fa-calendar-alt"></i> June 2024</span>
+                            <span><i class="far fa-eye"></i> 245 views</span>
+                        </div>
+                      
+                        <div class="video-link" data-video="/videos/WhatsApp%20Video%202026-08-18%20at%205.00.39%20PM.mp4"></div>
+                    </div>
+                </div>
+
+                <!-- ===== VIDEO 2: Training ===== -->
+                <div class="video-item" data-category="training">
+                    <div class="video-thumbnail" style="background-image: url('/images/thumbnail2.JPG');">
+                        <div class="video-play-overlay">
+                            <i class="fas fa-play-circle"></i>
+                            <span>Watch Video</span>
+                        </div>
+                        <div class="video-duration">06:45</div>
+                    </div>
+                    <div class="video-info">
+                        <h4>Training</h4>
+                        <p>Our team performing a dance</p>
+                        <div class="video-meta">
+                            <span><i class="far fa-calendar-alt"></i> May 2024</span>
+                            <span><i class="far fa-eye"></i> 189 views</span>
+                        </div>
+                        <div class="video-link" data-video="/videos/WhatsApp%20Video%202026-08-18%20at%205.00.37%20PM.mp4"></div>
+                    </div>
+                </div>
+
+                <!-- ===== VIDEO 3: Live Match ===== -->
+                <div class="video-item" data-category="training">
+                    <div class="video-thumbnail" style="background-image: url('/images/thumbnail3.JPG');">
+                        <div class="video-play-overlay">
+                            <i class="fas fa-play-circle"></i>
+                            <span>Watch Video</span>
+                        </div>
+                        <div class="video-duration">07:20</div>
+                    </div>
+                    <div class="video-info">
+                        <h4>Live Match</h4>
+                        <p>Specialized training for young goalkeepers and team co-operation</p>
+                        <div class="video-meta">
+                            <span><i class="far fa-calendar-alt"></i> April 2024</span>
+                            <span><i class="far fa-eye"></i> 156 views</span>
+                        </div>
+                        <div class="video-link" data-video="/videos/WhatsApp%20Video%202026-08-18%20at%205.00.40%20PM.mp4"></div>
+                    </div>
+                </div>
+
+                <!-- ===== VIDEO 4: Under 13 Tournament Finals ===== -->
+                <div class="video-item" data-category="matches">
+                    <div class="video-thumbnail" style="background-image: url('/images/thumbnail4.JPG');">
+                        <div class="video-play-overlay">
+                            <i class="fas fa-play-circle"></i>
+                            <span>Watch Video</span>
+                        </div>
+                        <div class="video-duration">12:30</div>
+                    </div>
+                    <div class="video-info">
+                        <h4>Under 13 Tournament Finals</h4>
+                        <p>Exciting finals match highlights</p>
+                        <div class="video-meta">
+                            <span><i class="far fa-calendar-alt"></i> June 2024</span>
+                            <span><i class="far fa-eye"></i> 420 views</span>
+                        </div>
+                        <div class="video-link" data-video="/videos/WhatsApp%20Video%202026-08-18%20at%205.00.41%20PM.mp4"></div>
+                    </div>
+                </div>
+                     <div class="video-item" data-category="highlights">
+                    <div class="video-thumbnail" style="background-image: url('/images/Capture1.JPG');">
+                        <div class="video-play-overlay">
+                            <i class="fas fa-play-circle"></i>
+                            <span>Watch Video</span>
+                        </div>
+                        <div class="video-duration">01:25</div>
+                    </div>
+                    <div class="video-info">
+                        <h4>One of our Queens</h4>
+                        <p>One of our Queens giving her life story</p>
+                        <div class="video-meta">
+                            <span><i class="far fa-calendar-alt"></i> Latest</span>
+                            <span><i class="far fa-eye"></i> 245 views</span>
+                        </div>
+                      
+                        <div class="video-link" data-video="/videos/gallery-19 (2).mp4"></div>
+                    </div>
+                </div>
+
+                
+
+            </div>
+
+            <!-- ===== LOAD MORE BUTTON ===== -->
+            <div class="load-more-container" id="loadMoreContainer">
+                <button class="btn btn-primary load-more-btn" id="loadMoreBtn">
+                    <i class="fas fa-plus-circle"></i> Load More Videos
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== VIDEO MODAL ===== -->
+    <div class="video-modal" id="videoModal">
+        <button class="modal-close" id="modalClose"><i class="fas fa-times"></i></button>
+        <div class="modal-content">
+            <div class="video-wrapper" id="videoWrapper">
+                <!-- Dynamic content will be inserted by JavaScript -->
+            </div>
+            <div class="modal-info">
+                <h4 id="modalTitle">Video Title</h4>
+                <p id="modalDescription">Video description</p>
+                <div class="modal-meta">
+                    <span id="modalCategory" class="modal-category">Category</span>
+                    <span id="modalDate"><i class="far fa-calendar-alt"></i> Date</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===== CTA SECTION ===== -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Want to See More?</h2>
+                <p>Get to know more about us and view our gallery for more inspiring content.</p>
+                <div class="cta-buttons">
+                    <a href="about.html" class="btn btn-primary">Our story <i class="fas fa-running"></i></a>
+                    <a href="gallery.html" class="btn btn-outline-light">View Gallery <i class="fas fa-images"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+     <!-- ===== FOOTER ===== -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-about">
+                    <div class="footer-caption">
+                    <a href="/index.html">
+                    <img src="/images/tsi.png" style="width: 30px; height: 30px; border-radius: 50%;" />
+                    <h4>Tumaini Sports</h4>
+                    </a>
+                    </div>
+                    <p>Empowering children through sports for better health, education, and wellness.</p>
+                    <div class="footer-social">
+                        <i class="fab fa-facebook-f"></i>
+                        <i class="fab fa-twitter"></i>
+                        <i class="fab fa-instagram"></i>
+                        <i class="fab fa-youtube"></i>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="gallery.html">Gallery</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Programs</h4>
+                    <ul>
+                        <li><a href="soccer-videos.html">Football Coaching</a></li>
+                        <li><a href="about.html">Mentorship</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h4>Contact Info</h4>
+                    <p><i class="fas fa-phone"></i> +254 726 318 700</p>
+                    <p><i class="fas fa-map-marker-alt"></i> Mbagathi Road Primary School, Nairobi, Kenya</p>
+                    <p><i class="far fa-clock"></i> Mon-Fri: 14:00 - 18:00</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Tumaini Sports Initiative. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ===== JAVASCRIPT ===== -->
+     <script src="js/main.js"></script>
+    <script src="js/gallery.js"></script>
+    <script src="js/videos.js"></script>
+</body>
+</html>

@@ -1,0 +1,647 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Gallery - Tumaini Sports Initiative. View photos from our events, training sessions, and community activities." />
+    <meta name="keywords" content="Tumaini Sports, gallery, sports photos, football, athletics, Kenya" />
+    <meta name="author" content="Tumaini Sports Initiative" />
+    <meta name="robots" content="index, follow" />
+
+    <meta property="og:title" content="Gallery - Tumaini Sports Initiative" />
+    <meta property="og:description" content="View our gallery of events, training sessions, and community activities." />
+    <meta property="og:url" content="https://www.tumainisports.com/gallery.html" />
+    <meta property="og:type" content="website" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="theme-color" content="#c0392b" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <!-- ===== CSS FILES ===== -->
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/gallery.css" />
+
+    <!-- ===== FONTS & ICONS ===== -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+
+    <link rel="icon" href="/images/tsi.png" type="image/x-icon" />
+
+    <title>Gallery - Tumaini Sports Initiative</title>
+</head>
+<body>
+
+    <!-- ===== TOP HEADER BAR ===== -->
+    <div class="top-header">
+        <div class="container">
+            <div class="top-header-content">
+                <div class="top-header-left">
+                    <span><i class="fas fa-phone-alt"></i> +254 726 318 700</span>
+                    <span><i class="fas fa-map-marker-alt"></i> Mbagathi Road Primary School, Nairobi, Kenya</span>
+                    <span><i class="far fa-clock"></i> 14:00 - 18:00 (Mon-Fri)</span>
+                </div>
+                <div class="top-header-right">
+                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===== NAVIGATION ===== -->
+    <nav class="navbar" id="navbar">
+        <div class="container">
+            <div class="nav-wrapper">
+                <div class="logo">
+                    <a href="index.html">
+                        <img src="/images/tsi.png" width="30px", height="30px">
+                        <span class="logo-text">Tumaini <span>Sports</span> Initiative</span>
+                    </a>
+                </div>
+
+                <ul class="nav-menu" id="navMenu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="gallery.html" class="active">Gallery</a></li>
+                    <li><a href="soccer-videos.html">Soccer Videos</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+
+                <div class="nav-actions">
+                    <a href="contact.html" class="btn-donate">
+                        <i class="fas fa-heart"></i> <span>Support Us</span>
+                    </a>
+                    <div class="hamburger" id="hamburger">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ===== GALLERY HERO ===== -->
+    <section class="gallery-hero">
+        <div class="container">
+            <div class="gallery-hero-content">
+                <span class="hero-badge">Our Moments</span>
+                <h1>Gallery</h1>
+                <p>Capturing the spirit of sports, community, and transformation</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== GALLERY FILTERS ===== -->
+    <section class="gallery-filters">
+        <div class="container">
+            <div class="filter-buttons">
+                <button class="filter-btn active" data-filter="all">All Photos</button>
+                <button class="filter-btn" data-filter="events">Events</button>
+                <button class="filter-btn" data-filter="training">Training</button>
+                <button class="filter-btn" data-filter="community">Community</button>
+                <button class="filter-btn" data-filter="tournaments">Tournaments</button>
+                <button class="filter-btn" data-filter="awards">Awards</button>
+            </div>
+            <div class="filter-count">
+                <span id="photoCount">0</span> Photos
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== GALLERY GRID ===== -->
+    <section class="gallery-grid-section">
+        <div class="container">
+            <div class="gallery-grid" id="galleryGrid">
+
+                <!-- ===== EVENTS ===== -->
+                <div class="gallery-item" data-category="events">
+                    <div class="gallery-item-image" style="background-image: url('/images/gallery-13.jpeg');">
+                        <div class="gallery-item-overlay">
+                            <i class="fas fa-search-plus"></i>
+                            <span>View Photo</span>
+                        </div>
+                    </div>
+                    <div class="gallery-item-info">
+                        <h4>Sports Day 2024</h4>
+                        <p>Annual sports day celebration</p>
+                        <span class="gallery-date"><i class="far fa-calendar-alt"></i> June 2024</span>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="events">
+                    <div class="gallery-item-image" style="background-image: url('/images/gallery-12.jpeg');">
+                        <div class="gallery-item-overlay">
+                            <i class="fas fa-search-plus"></i>
+                            <span>View Photo</span>
+                        </div>
+                    </div>
+                    <div class="gallery-item-info">
+                        <h4>Opening Ceremony</h4>
+                        <p>Kicking off the new season</p>
+                        <span class="gallery-date"><i class="far fa-calendar-alt"></i> May 2024</span>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="events">
+                    <div class="gallery-item-image" style="background-image: url('/images/gallery-6.jpeg');">
+                        <div class="gallery-item-overlay">
+                            <i class="fas fa-search-plus"></i>
+                            <span>View Photo</span>
+                        </div>
+                    </div>
+                    <div class="gallery-item-info">
+                        <h4>Family Sports Day</h4>
+                        <p>Families joining the fun</p>
+                        <span class="gallery-date"><i class="far fa-calendar-alt"></i> April 2024</span>
+                    </div>
+                </div>
+                <div class="gallery-item" data-category="events">
+                    <div class="gallery-item-image" style="background-image: url('/images/gallery-19\ \(5\).jpeg');">
+                        <div class="gallery-item-overlay">
+                            <i class="fas fa-search-plus"></i>
+                            <span>View Photo</span>
+                        </div>
+                    </div>
+                    <div class="gallery-item-info">
+                        <h4>Sports Day 2024</h4>
+                        <p>Annual sports day celebration</p>
+                        <span class="gallery-date"><i class="far fa-calendar-alt"></i> June 2024</span>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="events">
+                    <div class="gallery-item-image" style="background-image: url('/images/hero-5.jpeg');">
+                        <div class="gallery-item-overlay">
+                            <i class="fas fa-search-plus"></i>
+                            <span>View Photo</span>
+                        </div>
+                    </div>
+                    <div class="gallery-item-info">
+                        <h4>End of Season Party</h4>
+                        <p>Celebrating the season</p>
+                        <span class="gallery-date"><i class="far fa-calendar-alt"></i> March 2024</span>
+                    </div>
+                </div>
+                <div class="gallery-item" data-category="events">
+                    <div class="gallery-item-image" style="background-image: url('/images/gallery-2.jpeg');">
+                        <div class="gallery-item-overlay">
+                            <i class="fas fa-search-plus"></i>
+                            <span>View Photo</span>
+                        </div>
+                    </div>
+                    <div class="gallery-item-info">
+                        <h4>Sports Day 2024</h4>
+                        <p>Annual sports day celebration</p>
+                        <span class="gallery-date"><i class="far fa-calendar-alt"></i> June 2024</span>
+                    </div>
+                </div>
+                <div class="gallery-item" data-category="events">
+                    <div class="gallery-item-image" style="background-image: url('/images/gallery-10.jpeg');">
+                        <div class="gallery-item-overlay">
+                            <i class="fas fa-search-plus"></i>
+                            <span>View Photo</span>
+                        </div>
+                    </div>
+                    <div class="gallery-item-info">
+                        <h4>Sports Day 2024</h4>
+                        <p>Annual sports day celebration</p>
+                        <span class="gallery-date"><i class="far fa-calendar-alt"></i> June 2024</span>
+                    </div>
+                </div>
+
+                <!-- ===== TRAINING ===== -->
+                <div class="gallery-item" data-category="training">
+                    <div class="gallery-item-image" style="background-image: url('/images/hero-6.jpeg');">
+                        <div class="gallery-item-overlay">
+                            <i class="fas fa-search-plus"></i>
+                            <span>View Photo</span>
+                        </div>
+                    </div>
+                    <div class="gallery-item-info">
+                        <h4>Football Training</h4>
+                        <p>Youth football coaching session</p>
+                        <span class="gallery-date"><i class="far fa-calendar-alt"></i> June 2024</span>
+                    </div>
+                </div>
+<!----new added to replace-->
+                <div class="gallery-item" data-category="events">
+                    <div class="gallery-item-image" style="background-image: url('/images/gallery-115.jpeg');">
+                        <div class="gallery-item-overlay">
+                            <i class="fas fa-search-plus"></i>
+                            <span>View Photo</span>
+                        </div>
+                    </div>
+                    <div class="gallery-item-info">
+                        <h4>The Martial Arts Team</h4>
+                        <p>The Mixed Martial Arts Team (Kibera) </p>
+                        <span class="gallery-date"><i class="far fa-calendar-alt"></i> Latest </span>
+                    </div>
+                </div>
+        
+                <div class="gallery-item" data-category="events">
+                    <div class="gallery-item-image" style="background-image: url('/images/gallery-113.jpeg');">
+                        <div class="gallery-item-overlay">
+                            <i class="fas fa-search-plus"></i>
+                            <span>View Photo</span>
+                        </div>
+                    </div>
+                    <div class="gallery-item-info">
+                        <h4>Martial Arts Kids in action</h4>
+                        <p>The martial arts kids in there full action</p>
+                        <span class="gallery-date"><i class="far fa-calendar-alt"></i> Latest </span>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="events">
+                    <div class="gallery-item-image" style="background-image: url('/images/gallery-112.jpeg');">
+                        <div class="gallery-item-overlay">
+                            <i class="fas fa-search-plus"></i>
+                            <span>View Photo</span>
+                        </div>
+                    </div>
+                    <div class="gallery-item-info">
+                        <h4>Muna in action</h4>
+                        <p>Muna one of the team players in action</p>
+                        <span class="gallery-date"><i class="far fa-calendar-alt"></i> Latest </span>
+                    </div>
+                </div>
+                <!--end of the new added to replace-->
+
+                <div class="gallery-item" data-category="training">
+                    <div class="gallery-item-image" style="background-image: url('/images/hero-7.jpeg');">
+                        <div class="gallery-item-overlay">
+                            <i class="fas fa-search-plus"></i>
+                            <span>View Photo</span>
+                        </div>
+                    </div>
+                    <div class="gallery-item-info">
+                        <h4>Athletics Training</h4>
+                        <p>Track and field practice</p>
+                        <span class="gallery-date"><i class="far fa-calendar-alt"></i> May 2024</span>
+                    </div>
+                </div>
+                 <div class="gallery-item" data-category="training">
+                    <div class="gallery-item-image" style="background-image: url('/images/gallery-7.jpeg');">
+                        <div class="gallery-item-overlay">
+                            <i class="fas fa-search-plus"></i>
+                            <span>View Photo</span>
+                        </div>
+                    </div>
+                    <div class="gallery-item-info">
+                        <h4>Football Training</h4>
+                        <p>Youth football coaching session</p>
+                        <span class="gallery-date"><i class="far fa-calendar-alt"></i> June 2024</span>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="training">
+                    <div class="gallery-item-image" style="background-image: url('/images/gallery-18.jpeg');">
+                        <div class="gallery-item-overlay">
+                            <i class="fas fa-search-plus"></i>
+                            <span>View Photo</span>
+                        </div>
+                    </div>
+                    <div class="gallery-item-info">
+                        <h4>Goalkeeper Training</h4>
+                        <p>Specialized skills training</p>
+                        <span class="gallery-date"><i class="far fa-calendar-alt"></i> April 2024</span>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="training">
+                    <div class="gallery-item-image" style="background-image: url('/images/gallery-19\ \(8\).jpeg');">
+                        <div class="gallery-item-overlay">
+                            <i class="fas fa-search-plus"></i>
+                            <span>View Photo</span>
+                        </div>
+                    </div>
+                    <div class="gallery-item-info">
+                        <h4>Morning Practice</h4>
+                        <p>Early morning training session</p>
+                        <span class="gallery-date"><i class="far fa-calendar-alt"></i> March 2024</span>
+                    </div>
+                </div>
+                 <div class="gallery-item" data-category="training">
+                    <div class="gallery-item-image" style="background-image: url('/images/gallery-3.jpeg');">
+                        <div class="gallery-item-overlay">
+                            <i class="fas fa-search-plus"></i>
+                            <span>View Photo</span>
+                        </div>
+                    </div>
+                    <div class="gallery-item-info">
+                        <h4>Goalkeeper Training</h4>
+                        <p>Specialized skills training</p>
+                        <span class="gallery-date"><i class="far fa-calendar-alt"></i> April 2024</span>
+                    </div>
+                </div>
+                 <div class="gallery-item" data-category="training">
+                    <div class="gallery-item-image" style="background-image: url('/images/gallery-12.jpeg');">
+                        <div class="gallery-item-overlay">
+                            <i class="fas fa-search-plus"></i>
+                            <span>View Photo</span>
+                        </div>
+                    </div>
+                    <div class="gallery-item-info">
+                        <h4>Goalkeeper Training</h4>
+                        <p>Specialized skills training</p>
+                        <span class="gallery-date"><i class="far fa-calendar-alt"></i> April 2024</span>
+                    </div>
+                </div>
+                   <div class="gallery-item" data-category="training">
+                    <div class="gallery-item-image" style="background-image: url('/images/gallery-19\ \(3\).jpeg');">
+                        <div class="gallery-item-overlay">
+                            <i class="fas fa-search-plus"></i>
+                            <span>View Photo</span>
+                        </div>
+                    </div>
+                    <div class="gallery-item-info">
+                        <h4>Football Training</h4>
+                        <p>Youth football coaching session</p>
+                        <span class="gallery-date"><i class="far fa-calendar-alt"></i> June 2024</span>
+                    </div>
+                </div>
+                   <div class="gallery-item" data-category="training">
+                    <div class="gallery-item-image" style="background-image: url('/images/gallery-11.jpeg');">
+                        <div class="gallery-item-overlay">
+                            <i class="fas fa-search-plus"></i>
+                            <span>View Photo</span>
+                        </div>
+                    </div>
+                    <div class="gallery-item-info">
+                        <h4>Football Training</h4>
+                        <p>Youth football coaching session</p>
+                        <span class="gallery-date"><i class="far fa-calendar-alt"></i> June 2024</span>
+                    </div>
+                </div>
+
+                <!-- ===== COMMUNITY ===== -->
+                <div class="gallery-item" data-category="community">
+                    <div class="gallery-item-image" style="background-image: url('/images/gallery-19\ \(4\).jpeg');">
+                        <div class="gallery-item-overlay">
+                            <i class="fas fa-search-plus"></i>
+                            <span>View Photo</span>
+                        </div>
+                    </div>
+                    <div class="gallery-item-info">
+                        <h4>Community Outreach</h4>
+                        <p>Engaging with the community</p>
+                        <span class="gallery-date"><i class="far fa-calendar-alt"></i> June 2024</span>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="community">
+                    <div class="gallery-item-image" style="background-image: url('/images/gallery-14.jpeg');">
+                        <div class="gallery-item-overlay">
+                            <i class="fas fa-search-plus"></i>
+                            <span>View Photo</span>
+                        </div>
+                    </div>
+                    <div class="gallery-item-info">
+                        <h4>School Visit</h4>
+                        <p>Inspiring young minds</p>
+                        <span class="gallery-date"><i class="far fa-calendar-alt"></i> May 2024</span>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="community">
+                    <div class="gallery-item-image" style="background-image: url('/images/gallery-13.jpeg');">
+                        <div class="gallery-item-overlay">
+                            <i class="fas fa-search-plus"></i>
+                            <span>View Photo</span>
+                        </div>
+                    </div>
+                    <div class="gallery-item-info">
+                        <h4>Community Cleanup</h4>
+                        <p>Giving back to the community</p>
+                        <span class="gallery-date"><i class="far fa-calendar-alt"></i> April 2024</span>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="community">
+                    <div class="gallery-item-image" style="background-image: url('/images/hero-5.jpeg');">
+                        <div class="gallery-item-overlay">
+                            <i class="fas fa-search-plus"></i>
+                            <span>View Photo</span>
+                        </div>
+                    </div>
+                    <div class="gallery-item-info">
+                        <h4>Parents Meeting</h4>
+                        <p>Engaging parents in the program</p>
+                        <span class="gallery-date"><i class="far fa-calendar-alt"></i> March 2024</span>
+                    </div>
+                </div>
+
+                <!-- ===== TOURNAMENTS ===== -->
+                <div class="gallery-item" data-category="tournaments">
+                    <div class="gallery-item-image" style="background-image: url('/images/gallery-19\ \(9\).jpeg');">
+                        <div class="gallery-item-overlay">
+                            <i class="fas fa-search-plus"></i>
+                            <span>View Photo</span>
+                        </div>
+                    </div>
+                    <div class="gallery-item-info">
+                        <h4>Tournament Finals</h4>
+                        <p>Exciting finals match</p>
+                        <span class="gallery-date"><i class="far fa-calendar-alt"></i> June 2024</span>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="tournaments">
+                    <div class="gallery-item-image" style="background-image: url('/images/hero-6.jpeg');">
+                        <div class="gallery-item-overlay">
+                            <i class="fas fa-search-plus"></i>
+                            <span>View Photo</span>
+                        </div>
+                    </div>
+                    <div class="gallery-item-info">
+                        <h4>Team Photo</h4>
+                        <p>Championship winning team</p>
+                        <span class="gallery-date"><i class="far fa-calendar-alt"></i> May 2024</span>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="tournaments">
+                    <div class="gallery-item-image" style="background-image: url('/images/gallery-19\ \(7\).jpeg');">
+                        <div class="gallery-item-overlay">
+                            <i class="fas fa-search-plus"></i>
+                            <span>View Photo</span>
+                        </div>
+                    </div>
+                    <div class="gallery-item-info">
+                        <h4>Match Action</h4>
+                        <p>Intense match action</p>
+                        <span class="gallery-date"><i class="far fa-calendar-alt"></i> April 2024</span>
+                    </div>
+                </div>
+                <div class="gallery-item" data-category="tournaments">
+                    <div class="gallery-item-image" style="background-image: url('/images/gallery-19\ \(6\).jpeg');">
+                        <div class="gallery-item-overlay">
+                            <i class="fas fa-search-plus"></i>
+                            <span>View Photo</span>
+                        </div>
+                    </div>
+                    <div class="gallery-item-info">
+                        <h4>Team Photo</h4>
+                        <p>Championship winning team</p>
+                        <span class="gallery-date"><i class="far fa-calendar-alt"></i> May 2024</span>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="tournaments">
+                    <div class="gallery-item-image" style="background-image: url('/images/gallery-14.jpeg');">
+                        <div class="gallery-item-overlay">
+                            <i class="fas fa-search-plus"></i>
+                            <span>View Photo</span>
+                        </div>
+                    </div>
+                    <div class="gallery-item-info">
+                        <h4>Spectators</h4>
+                        <p>Cheering on the teams</p>
+                        <span class="gallery-date"><i class="far fa-calendar-alt"></i> March 2024</span>
+                    </div>
+                </div>
+
+                <!-- ===== AWARDS ===== -->
+                <div class="gallery-item" data-category="awards">
+                    <div class="gallery-item-image" style="background-image: url('/images/gallery-12.jpeg');">
+                        <div class="gallery-item-overlay">
+                            <i class="fas fa-search-plus"></i>
+                            <span>View Photo</span>
+                        </div>
+                    </div>
+                    <div class="gallery-item-info">
+                        <h4>Award Ceremony</h4>
+                        <p>Celebrating achievements</p>
+                        <span class="gallery-date"><i class="far fa-calendar-alt"></i> June 2024</span>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="awards">
+                    <div class="gallery-item-image" style="background-image: url('/images/gallery-5.jpeg');">
+                        <div class="gallery-item-overlay">
+                            <i class="fas fa-search-plus"></i>
+                            <span>View Photo</span>
+                        </div>
+                    </div>
+                    <div class="gallery-item-info">
+                        <h4>MVP Award</h4>
+                        <p>Most Valuable Player recognition</p>
+                        <span class="gallery-date"><i class="far fa-calendar-alt"></i> May 2024</span>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="awards">
+                    <div class="gallery-item-image" style="background-image: url('/images/gallery-19\ \(2\).jpeg');">
+                        <div class="gallery-item-overlay">
+                            <i class="fas fa-search-plus"></i>
+                            <span>View Photo</span>
+                        </div>
+                    </div>
+                    <div class="gallery-item-info">
+                        <h4>Trophy Presentation</h4>
+                        <p>Celebrating victory</p>
+                        <span class="gallery-date"><i class="far fa-calendar-alt"></i> April 2024</span>
+                    </div>
+                </div>
+
+
+            </div>
+
+            <!-- ===== LOAD MORE BUTTON ===== -->
+            <div class="load-more-container" id="loadMoreContainer">
+                <button class="btn btn-primary load-more-btn" id="loadMoreBtn">
+                    <i class="fas fa-plus-circle"></i> Load More Photos
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== LIGHTBOX ===== -->
+    <div class="gallery-lightbox" id="galleryLightbox">
+        <button class="lightbox-close" id="lightboxClose"><i class="fas fa-times"></i></button>
+        <button class="lightbox-prev" id="lightboxPrev"><i class="fas fa-chevron-left"></i></button>
+        <button class="lightbox-next" id="lightboxNext"><i class="fas fa-chevron-right"></i></button>
+        <div class="lightbox-content">
+            <img src="" alt="Gallery Image" id="lightboxImage" />
+            <div class="lightbox-info" id="lightboxInfo">
+                <h4 id="lightboxTitle">Image Title</h4>
+                <p id="lightboxDescription">Image description</p>
+                <span id="lightboxCategory" class="lightbox-category">Category</span>
+            </div>
+        </div>
+        <div class="lightbox-counter" id="lightboxCounter">1 / 1</div>
+    </div>
+
+    <!-- ===== CTA SECTION ===== -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Want to Be Part of Our Story?</h2>
+                <p>Join us in creating more memorable moments through sports.</p>
+                <div class="cta-buttons">
+                    <a href="contact.html" class="btn btn-primary">Get Involved <i class="fas fa-heart"></i></a>
+                    <a href="soccer-videos.html" class="btn btn-outline-light">Watch Videos <i class="fas fa-play"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== FOOTER ===== -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-about">
+                    <div class="footer-caption">
+                    <a href="/index.html">
+                    <img src="/images/tsi.png" style="width: 30px; height: 30px; border-radius: 50%;" />
+                    <h4>Tumaini Sports</h4>
+                    </a>
+                    </div>
+                    <p>Empowering children through sports for better health, education, and wellness.</p>
+                    <div class="footer-social">
+                       <i class="fab fa-facebook-f"></i>
+                        <i class="fab fa-twitter"></i>
+                        <i class="fab fa-instagram"></i>
+                        <i class="fab fa-youtube"></i>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="gallery.html">Gallery</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Programs</h4>
+                    <ul>
+                        <li><a href="soccer-videos.html">Football Coaching</a></li>
+                        <li><a href="about.html">Mentorship</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h4>Contact Info</h4>
+                    <p><i class="fas fa-phone"></i> +254 726 318 700</p>
+                    <p><i class="fas fa-map-marker-alt"></i> Mbagathi Road Primary School, Nairobi, Kenya</p>
+                    <p><i class="far fa-clock"></i> Mon-Fri: 14:00 - 18:00</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Tumaini Sports Initiative. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ===== JAVASCRIPT ===== -->
+     <script src="js/main.js"></script>
+    <script src="js/gallery.js"></script>
+    <script src="js/videos.js"></script>
+</body>
+</html>
