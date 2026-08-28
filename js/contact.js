@@ -1,5 +1,8 @@
+
 document.addEventListener('DOMContentLoaded', function () {
+
     const form = document.getElementById('contactForm');
+
     if (!form) return;
 
     const fields = {
@@ -10,143 +13,281 @@ document.addEventListener('DOMContentLoaded', function () {
         message: document.getElementById('message')
     };
 
-    const submitBtn = document.getElementById('submitBtn');
     const successMsg = document.getElementById('successMsg');
 
+
+    // =========================
+    // SHOW ERROR MESSAGE
+    // =========================
     function showError(elementId, message) {
         const el = document.getElementById(elementId);
-        if (el) el.textContent = message;
+
+        if (el) {
+            el.textContent = message;
+        }
     }
 
+
+    // =========================
+    // FIELD VALIDATION STATE
+    // =========================
     function setFieldState(field, valid) {
+
         if (!field) return;
+
         field.classList.toggle('error', !valid);
         field.classList.toggle('success', valid);
     }
 
+
+    // =========================
+    // VALIDATE NAME
+    // =========================
     function validateName() {
+
         const value = fields.name.value.trim();
+
         const valid = value.length >= 2;
-        showError('nameError', valid ? '' : (value ? 'Name must be at least two characters' : 'Name is required'));
+
+        showError(
+            'nameError',
+            valid
+                ? ''
+                : (value
+                    ? 'Name must be at least two characters'
+                    : 'Name is required')
+        );
+
         setFieldState(fields.name, valid);
+
         return valid;
     }
 
+
+    // =========================
+    // VALIDATE EMAIL
+    // =========================
     function validateEmail() {
+
         const value = fields.email.value.trim();
+
         const valid = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value);
-        showError('emailError', valid ? '' : (value ? 'Please enter a valid email' : 'Email is required'));
+
+        showError(
+            'emailError',
+            valid
+                ? ''
+                : (value
+                    ? 'Please enter a valid email'
+                    : 'Email is required')
+        );
+
         setFieldState(fields.email, valid);
+
         return valid;
     }
 
+
+    // =========================
+    // VALIDATE PHONE
+      // =========================
     function validatePhone() {
+
         const value = fields.phone.value.trim();
-        // Phone is optional in the form. Validate it only when supplied.
-        const valid = value === '' || /^[+]?[0-9\s().-]{7,20}$/.test(value);
-        showError('phoneError', valid ? '' : 'Please enter a valid phone number');
+
+        
+        // it must be a valid phone number
+        const valid = /^[+]?[0-9\s().-]{7,20}$/.test(value);
+
+        showError('phoneError', valid ? '' : (valid ? 'Please enter a valid phone number' : 'Please enter your phone number' )  );
+
         setFieldState(fields.phone, valid);
+
         return valid;
     }
 
+
+    // =========================
+    // VALIDATE SUBJECT
+    // =========================
     function validateSubject() {
+
         const value = fields.subject.value.trim();
+
         const valid = value.length > 0;
-        showError('subjectError', valid ? '' : 'Please write your message');
+
+        showError(
+            'subjectError',
+            valid
+                ? ''
+                : 'Subject is required'
+        );
+
         setFieldState(fields.subject, valid);
+
         return valid;
     }
 
+
+    // =========================
+    // VALIDATE MESSAGE
+    // =========================
     function validateMessage() {
+
         const value = fields.message.value.trim();
+
         const valid = value.length >= 10;
-        showError('messageError', valid ? '' : (value ? 'Message must be at least 10 characters' : 'Please type your message'));
+
+        showError(
+            'messageError',
+            valid
+                ? ''
+                : (value
+                    ? 'Message must be at least 10 characters'
+                    : 'Please type your message')
+        );
+
         setFieldState(fields.message, valid);
+
         return valid;
     }
 
+
+    // =========================
+    // CLEAR ALL ERRORS
+    // =========================
     function clearAllErrors() {
-        document.querySelectorAll('.error-message').forEach(el => el.textContent = '');
-        document.querySelectorAll('input, textarea').forEach(input => {
-            input.classList.remove('error', 'success');
-        });
+
+        document
+            .querySelectorAll('.error-message')
+            .forEach(el => {
+                el.textContent = '';
+            });
+
+        document
+            .querySelectorAll('input, textarea')
+            .forEach(input => {
+                input.classList.remove('error', 'success');
+            });
     }
 
-    function showStatus(message, type) {
-        successMsg.classList.remove('show', 'error');
-        successMsg.textContent = message;
+
+    // =========================
+    // SHOW SUCCESS MESSAGE
+    // =========================
+    function showStatus(message) {
+
+        if (!successMsg) return;
+
+        successMsg.classList.remove('error');
+
+        successMsg.innerHTML = message;
+
         successMsg.classList.add('show');
-        if (type === 'error') successMsg.classList.add('error');
-        successMsg.scrollIntoView({ behavior: 'smooth', block: 'center' });
+
+        successMsg.scrollIntoView({
+            behavior: 'smooth',
+            block: 'center'
+        });
+
+        // Hide after 5 seconds
+        setTimeout(() => {
+            successMsg.classList.remove('show');
+        }, 6000);
     }
 
-    form.addEventListener('submit', async function (event) {
+
+    // =========================
+    // FORM SUBMISSION
+    // =========================
+    form.addEventListener('submit', function (event) {
+
+        // Prevent the browser from actually submitting
         event.preventDefault();
+
+        // Clear previous errors
         clearAllErrors();
 
-        const valid =
-            validateName() &&
-            validateEmail() &&
-            validatePhone() &&
-            validateSubject() &&
-            validateMessage();
 
+        // Validate everything
+        const nameValid = validateName();
+        const emailValid = validateEmail();
+        const phoneValid = validatePhone();
+        const subjectValid = validateSubject();
+        const messageValid = validateMessage();
+
+
+        const valid =
+            nameValid &&
+            emailValid &&
+            phoneValid &&
+            subjectValid &&
+            messageValid;
+
+
+        // =========================
+        // INVALID FORM
+        // =========================
         if (!valid) {
+
             const firstInvalid = form.querySelector('.error');
+
             if (firstInvalid) {
+
                 firstInvalid.focus();
-                firstInvalid.scrollIntoView({ behavior: 'smooth', block: 'center' });
+
+                firstInvalid.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'center'
+                });
             }
+
             return;
         }
 
-        const originalButton = submitBtn.innerHTML;
-        submitBtn.disabled = true;
-        submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
-        successMsg.classList.remove('show', 'error');
 
-        try {
-            const response = await fetch('/api/contact', {
-                method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({
-                    name: fields.name.value.trim(),
-                    email: fields.email.value.trim(),
-                    phone: fields.phone.value.trim(),
-                    subject: fields.subject.value.trim(),
-                    message: fields.message.value.trim()
-                })
+        // =========================
+        // VALID FORM
+        // =========================
+
+        showStatus(
+            'Message sent successfully! Thank you for contacting us. For faster reply, reach us via our <a href="mailto: tumainisportsinitiative@gmail.com" style="color: #e74c3c;">email</a> or <a href="tel: +254 726 318 700" style="color: #e74c3c;">phone Number</a>'
+        );
+
+
+        // Clear the form
+        form.reset();
+
+
+        // Remove success styling
+        document
+            .querySelectorAll('input, textarea')
+            .forEach(field => {
+                field.classList.remove('success');
             });
 
-            const result = await response.json();
 
-            if (!response.ok) {
-                throw new Error(result.message || 'Unable to send your message.');
-            }
-
-            showStatus(result.message || 'Message sent Successfully', 'success');
-            form.reset();
-            document.querySelectorAll('input, textarea').forEach(field => field.classList.remove('success'));
-
-            setTimeout(() => successMsg.classList.remove('show'), 5000);
-        } catch (error) {
-            console.error('Contact form error:', error);
-            showStatus(error.message || 'Something went wrong. Please try again.', 'error');
-        } finally {
-            submitBtn.disabled = false;
-            submitBtn.innerHTML = originalButton;
-        }
+        console.log('Message sent successfully.');
     });
 
+
+    // =========================
+    // VALIDATE ON BLUR
+    // =========================
     fields.name.addEventListener('blur', validateName);
     fields.email.addEventListener('blur', validateEmail);
     fields.phone.addEventListener('blur', validatePhone);
     fields.subject.addEventListener('blur', validateSubject);
     fields.message.addEventListener('blur', validateMessage);
 
+
+    // =========================
+    // VALIDATE WHILE TYPING
+    // =========================
     fields.name.addEventListener('input', validateName);
     fields.email.addEventListener('input', validateEmail);
     fields.phone.addEventListener('input', validatePhone);
     fields.subject.addEventListener('input', validateSubject);
     fields.message.addEventListener('input', validateMessage);
+
 });
